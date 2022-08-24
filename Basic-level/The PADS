@@ -1,3 +1,4 @@
+# medium level
 SELECT CONCAT(Name,CASE
 WHEN occupation= 'Actor'THEN '(A)'
 WHEN occupation= 'Doctor'THEN '(D)'
