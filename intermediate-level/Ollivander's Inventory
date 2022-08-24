@@ -1,0 +1,5 @@
+select w.id,p.age,w.coins_needed,w.power
+from(select code,power,min(coins_needed) as coins from Wands group by code,power ) as f join Wands as w on f.code = w.code and f.power = w.power and f.coins = w.coins_needed join Wands_Property as p
+on w.code = p.code
+where p.is_evil = 0
+order by w.power desc, p.age desc;
